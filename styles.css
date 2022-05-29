@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "outfit";
+}
+a{
+ text-decoration: none;
+}
+body{
+    background-color: hsl(217, 54%, 11%);
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: hsl(216, 50%, 16%);
+    max-width: 350px;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0px 20px 25px 15px rgba(0,0,0,0.05),
+                0px 40px 30px 15px rgba(0,0,0,0.1);
+                
+}
+
+.product_image{
+position: relative;
+border-radius: 8px;
+overflow: hidden;
+cursor: pointer;
+padding-right: 10px;
+padding-right: 5px;
+}
+.product_image::after{
+    color: hsl(178, 100%, 50%,0.5);
+
+    content: url(icon-view.svg);
+    background: aqua;
+    inset: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    transition: all 0.25s ease;
+}
+
+.product_image:hover::after{opacity: 1;}
+
+
+.product_image img{
+    width: 100%;
+    display: block;
+}
+
+.card_body{
+    padding: 23px,0;
+    border-bottom: 1px solid indigo;
+    margin-bottom: 15px;
+}
+
+
+.card_title{
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 10px;
+    
+}
+.card_title:hover{color: aqua;}
+
+.card_text{
+    color: rgba(128, 128, 128, 0.925);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 18px;
+    
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.price{
+    color:aqua;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 200;
+
+}
+
+.price :hover{
+    color: aqua;
+}
+
+.countdown{
+    color: rgba(128, 128, 128, 0.897);
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.icon{
+    margin-right: 3px;
+}
+
+.card_icon{
+    margin-right: 6px;
+    margin-top: 5px;
+}
+
+.footer{
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+color: gray;
+}
+
+.card_author-img{
+width: 30px;
+height: 30px;
+border: 1px solid white;
+border-radius: 15px;
+}
+
+.card_author-name{
+    display: flex;
+    color: rgba(128, 128, 128, 0.877);
+    margin-left: 5px;
+}
+
+.card_author-name a{
+    color: white;
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: large;
+
+}
+.link:hover{
+    color: aqua;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 480px), (max-width:1440px){
+    .card{
+        color: hsl(216, 50%, 16%);
+    }
+}
